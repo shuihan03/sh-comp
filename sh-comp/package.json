@@ -5,7 +5,7 @@
   "main": "entry.js",
   "scripts": {
     "build": "webpack --config build/webpack.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.config.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config build/webpack.demo.config.js"
   },
   "keywords": [],
   "author": "",
