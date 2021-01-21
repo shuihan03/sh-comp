@@ -6,9 +6,10 @@ import VueRouter from 'vue-router';
 Vue.use(JDD);
 // Vue.component('jdd-button',JDD.Button)
 const router=new VueRouter({
-    router,
+    routes,
     mode:'history'
 })
+Vue.use(VueRouter)
 new Vue({
     el: '#app',
     router,

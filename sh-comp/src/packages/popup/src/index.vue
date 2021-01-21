@@ -15,7 +15,7 @@
             show: Boolean,
             closeOnClickOverlay: {
                 type: Boolean,
-                value: false
+                default: false
             }
         },
         watch: {
