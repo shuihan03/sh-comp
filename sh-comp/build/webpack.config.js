@@ -11,6 +11,12 @@ module.exports = (env, argv) => {
         entry: [
             path.join(__dirname, '../src/entry.js')
         ],
+        output: {
+            library: 'someLibName',
+            libraryTarget: 'umd',
+            filename: 'sh-comp.min.js',
+            auxiliaryComment: 'Test Comment'
+        },
         module: {
             rules: [
                 {
