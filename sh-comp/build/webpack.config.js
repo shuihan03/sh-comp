@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = (env, argv) => {
+    console.log('argv=',argv);
     const devMode = argv.mode !== 'production'
     return {
         entry: [
@@ -14,7 +15,7 @@ module.exports = (env, argv) => {
         output: {
             library: 'someLibName',
             libraryTarget: 'umd',
-            filename: 'sh-comp.min.js',
+            filename: 'sh-ui.min.js',
             auxiliaryComment: 'Test Comment'
         },
         module: {

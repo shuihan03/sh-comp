@@ -4,8 +4,9 @@
   "description": "",
   "main": "entry.js",
   "scripts": {
-    "build": "webpack --config build/webpack.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config build/webpack.demo.config.js"
+    "build": "webpack --config build/webpack.config.js  --mode=production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config build/webpack.demo.config.js",
+    "build:example":"cross-env NODE_ENV=production webpack --config build/webpack.demo.config.js"
   },
   "keywords": [],
   "author": "",
