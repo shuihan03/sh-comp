@@ -2,12 +2,14 @@
     <div class="example">
         <div class="row-info" @click="showPopUp">显示底部滑入弹窗</div>
         <div class="row-info" @click="showModal">显示弹窗</div>
+        <div class="row-info" @click="showKeyBoard">显示数字键盘</div>
         <jdd-modal :show="dialogShow" @close="closeModal">
           <div class="detail-info2">this is modal content</div>
         </jdd-modal>
         <jdd-popup :show="dialogBottomShow" :closeOnClickOverlay="true" @close="closeBottomDialog">
           <div class="detail-info">this is popup content</div>
         </jdd-popup>
+        <jdd-number-keyboard :show="keyboardShow" @enter="handleEnter" @close="closeKeyBoard" @delete="handleDelete"></jdd-number-keyboard>
     </div>
 </template>
 <style lang='scss' scoped>
@@ -33,7 +35,8 @@
         data() {
             return {
                 dialogBottomShow: false,
-                dialogShow:false
+                dialogShow:false,
+                keyboardShow:false
             }
         },
         methods: {
@@ -48,7 +51,22 @@
             },
             closeModal(){
                 this.dialogShow=false;
-            }
+            },
+            showKeyBoard(){
+                this.keyboardShow=true;
+            },
+            hideKeyBoard(){
+                this.keyboardShow=false;
+            },
+            closeKeyBoard(){
+                this.keyboardShow=false;
+            },
+            handleDelete(){
+
+            },
+            handleEnter(){
+                
+            },
         }
     }
 </script>
