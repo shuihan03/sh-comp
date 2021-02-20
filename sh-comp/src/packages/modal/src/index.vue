@@ -1,13 +1,13 @@
 <template>
-    <view class="f-modal f-model-out" v-if="display">
-        <view :class="'f-modal-mask mask-'+animation"></view>
-        <view :class="'f-modal-content modal-'+animation" :style="'margin-top: '+offset+'%'"
+    <div class="f-modal" v-if="display">
+        <div :class="'f-modal-mask mask-'+animation"></div>
+        <div :class="'f-modal-content modal-'+animation" :style="'margin-top: '+offset+'%'"
             @animationend="onAnimationEnd">
-            <view class="f-modal-close" v-if="showClose"  bindtap="handleClose"></view>
-            <view class="f-modal-title">{{title}}</view>
+            <div class="f-modal-close" v-if="showClose"  @click="handleClose"></div>
+            <div class="f-modal-title">{{title}}</div>
             <slot></slot>
-        </view>
-    </view>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -66,7 +66,7 @@
                 this.$emit('delete')
             },
             onAnimationEnd() {
-                if (!this.data.show) {
+                if (!this.show) {
                    this.display=false;
                    this.animation='leave'; 
                 } else {
@@ -90,7 +90,7 @@
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding: 0 40px;
+        padding: 0 20px;
         z-index: 99;
 
         @keyframes modal-enter {
@@ -180,10 +180,10 @@
 
         &-close {
             position: absolute;
-            right: 32px;
-            top: 32px;
-            width: 48px;
-            height: 48px;
+            right: 16px;
+            top: 16px;
+            width: 24px;
+            height: 24px;
             background-size: cover;
             background-position: center;
             background-image: url(https://storage.360buyimg.com/jms-mini/svg/icon-close.svg);

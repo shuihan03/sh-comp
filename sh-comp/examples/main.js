@@ -9,6 +9,9 @@ const router=new VueRouter({
     routes,
     mode:'history'
 })
+router.beforeEach((to, from, next) => {
+    console.log('跳转',to,from)
+})
 Vue.use(VueRouter)
 new Vue({
     el: '#app',
