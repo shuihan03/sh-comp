@@ -1,0 +1,15 @@
+
+$mainStrong: #172641;
+$borderRadiusLarge: 24px;
+$borderRadius: 8px;
+
+.flex { display: flex;}
+.flex-item { flex: 1;}
+.middle { align-items: center;}
+.top { align-items: flex-start;}
+.bottom { align-items: flex-end;}
+.left { justify-content: flex-start;}
+.center { justify-content: center;}
+.right { justify-content: flex-end;}
+.between { justify-content: space-between;}
+.around { justify-content: space-around;}
