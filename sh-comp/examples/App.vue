@@ -1,8 +1,9 @@
 <template>
     <div class="example">
-        <div class="row-info" @click="showPopUp">显示底部滑入弹窗</div>
-        <div class="row-info" @click="showModal">显示弹窗</div>
-        <div class="row-info" @click="showKeyBoard">显示数字键盘</div>
+        <div class="row-info" @click="showPopUp">底部滑入弹窗</div>
+        <div class="row-info" @click="showModal">弹窗</div>
+        <div class="row-info" @click="showKeyBoard">数字键盘</div>
+        <div class="row-info" @click="showPasswordInput">密码输入框</div>
         <jdd-modal :show="dialogShow" @close="closeModal">
           <div class="detail-info2">this is modal content</div>
         </jdd-modal>
@@ -10,6 +11,9 @@
           <div class="detail-info">this is popup content</div>
         </jdd-popup>
         <jdd-number-keyboard :show="keyboardShow" @enter="handleEnter" @close="closeKeyBoard" @delete="handleDelete"></jdd-number-keyboard>
+        <!-- <jdd-modal :show="dialogShow" @close="closeModal">
+          <jdd-password-input  :dot="dotFlag" :focus="focus" :value="password"></jdd-password-input>
+        </jdd-modal>   -->
     </div>
 </template>
 <style lang='scss' scoped>
@@ -36,7 +40,10 @@
             return {
                 dialogBottomShow: false,
                 dialogShow:false,
-                keyboardShow:false
+                keyboardShow:false,
+                dotFlag:false,
+                focus:false,
+                password:''
             }
         },
         methods: {
@@ -67,6 +74,10 @@
             handleEnter(){
                 
             },
+            showPasswordInput(){
+                this.focus=true;
+            },
+        
         }
     }
 </script>

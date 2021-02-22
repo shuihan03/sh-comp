@@ -9,7 +9,7 @@
     "build:example":"cross-env NODE_ENV=production webpack --config build/webpack.demo.config.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "shuihan",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
