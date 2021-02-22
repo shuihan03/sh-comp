@@ -192,8 +192,8 @@
             background-color: #E7E9EC;
             box-sizing: border-box;
             padding: 20px 16px;
-            padding-bottom: calc(constant(safe-area-inset-bottom) + 40px);
-            padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+            padding-bottom: calc(constant(safe-area-inset-bottom) + 20px);
+            padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
         }
 
         &-row {
